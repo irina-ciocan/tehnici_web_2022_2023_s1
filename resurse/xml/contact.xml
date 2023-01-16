@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contact>
+    <mesaje>
+        <mesaj username="anonim" data="Sat Jun 12 2021 12:29:29 GMT+0300 (Eastern European Summer Time)">Bau!</mesaj>
+        <mesaj username="anonim" data="Thu Dec 23 2021 17:49:38 GMT+0200 (Eastern European Standard Time)">ceva</mesaj>
+        <mesaj username="abcd" data="Mon Jan 03 2022 10:43:55 GMT+0200 (Eastern European Standard Time)">Happy new year!</mesaj>
+        <mesaj username="anonim" data="Thu May 19 2022 13:08:49 GMT+0300 (Eastern European Summer Time)">hello anonim</mesaj>
+        <mesaj username="anonim" data="Mon Jan 16 2023 05:21:59 GMT+0200 (Eastern European Standard Time)">bau</mesaj>
+        <mesaj username="anonim" data="Mon Jan 16 2023 05:22:06 GMT+0200 (Eastern European Standard Time)">12345</mesaj>
+    </mesaje>
+</contact>

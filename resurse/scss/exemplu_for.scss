@@ -1,0 +1,8 @@
+$nrimag:7;
+
+
+@for $i from 0 through 6{
+    #galerie_exemplu figure:nth-of-type(#{$nrimag - $i}){
+        animation-delay:$i * 3s;
+    }
+}

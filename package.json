@@ -1,0 +1,34 @@
+{
+  "name": "cofetaria-dulcelind",
+  "version": "1.0.0",
+  "description": "site pentru o cofetarie",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "formidable": "^2.1.1",
+    "helmet": "^6.0.1",
+    "mongodb": "^4.13.0",
+    "nodemailer": "^6.8.0",
+    "pg": "^8.8.0",
+    "puppeteer": "^19.4.1",
+    "qrcode": "^1.5.1",
+    "request": "^2.88.2",
+    "sass": "^1.56.1",
+    "sharp": "^0.31.2",
+    "xml-js": "^1.6.11",
+    "xmljs": "^0.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "prajituri",
+    "cozonaci",
+    "biscuiti"
+  ],
+  "author": "Irina Ciocan",
+  "license": "ISC"
+}

@@ -1,0 +1,133 @@
+body{
+    --inaltime-meniu:25px;
+    --latime-buton:100px;
+    --culoare-meniu: green;
+    --culoare-meniu-selectat:fuchsia;
+    --latime-bord-meniu:1px;
+}
+/*
+ul.meniu li:hover ul{
+    animation-name: animatie_submeniu;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 50% 0;
+    opacity:0;
+    display:block;
+}
+*/
+%fictiv{
+    height: var(--inaltime-meniu);
+    border:var(--latime-bord-meniu) solid black;
+    width:var(--latime-buton);
+}
+
+
+ul.meniu{
+    display:flex;
+    padding:0;
+    margin:0;
+    list-style-type: none;
+
+    li{
+        a{
+            
+            display:block;
+            height:100%;
+        }
+
+
+        &:hover{ 
+            ul{
+                animation-name: animatie_submeniu;
+                animation-duration: 2s;
+                animation-iteration-count: 1;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+                transform-origin: 50% 0;
+                opacity:0;
+                display:block;
+            }
+        }
+    }
+    > li{
+        
+        
+        
+        @extend %fictiv;
+        overflow:hidden;
+        line-height: var(--inaltime-meniu);
+        vertical-align: middle;
+        text-align: center;
+    }
+
+}
+
+
+ul.meniu ul li{
+    @extend %fictiv;
+}
+
+
+ul.meniu ul{
+    list-style-type: none;
+    z-index:10px;
+    position:relative;
+    left:-1px;
+    padding:0;
+    margin:0;
+    transform: scale(0.5, 0);
+    display:none;
+}
+
+
+
+
+
+ul.meniu li{
+    cursor:pointer;
+    background-color: var(--culoare-meniu);
+    transition:all 0.7s linear;
+}
+
+ul.meniu li:hover{
+    background-color: var(--culoare-meniu-selectat);
+}
+
+
+
+ul.meniu>li:hover{
+    overflow:visible;
+}
+
+ul.meniu a{
+    color:black;
+    text-decoration:none;
+}
+
+nav{
+    height:var(--inaltime-meniu);
+    background-color: var(--culoare-meniu);
+    overflow: visible;
+    position: relative;
+    width:100vw;
+    position:sticky;
+    top:0;
+}
+
+#hamburger, #ch-menu{
+    display:none;
+}
+
+@keyframes animatie_submeniu {
+
+    50%{
+        transform: scale(0.5,1);
+    }
+    100%{
+        transform: scale(1,1);
+        
+        opacity:1;
+    }
+}

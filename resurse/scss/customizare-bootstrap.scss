@@ -1,0 +1,19 @@
+
+@use '../../node_modules/bootstrap/scss/bootstrap.scss' with (
+    $primary: purple,
+    $form-range-track-width:          100%,
+$form-range-track-height:         .5rem,
+$form-range-track-cursor:         pointer,
+$form-range-track-bg:             red,
+$form-range-track-border-radius:  1rem,
+
+$form-range-thumb-width:                   2rem,
+$form-range-thumb-height:                  2rem,
+$form-range-thumb-bg:                      purple,
+$form-range-thumb-border:                  0,
+$form-range-thumb-border-radius:           1rem,
+$form-range-thumb-box-shadow:              0 .1rem .25rem rgba(0,0,0, .1),
+$form-range-thumb-active-bg:               tint-color(green, 70%),
+$form-range-thumb-disabled-bg:             gray,
+$form-range-thumb-transition:              all .15s ease-in-out,
+);

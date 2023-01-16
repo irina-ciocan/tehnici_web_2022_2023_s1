@@ -1,0 +1,81 @@
+
+    <header class="c1" id="h1" >
+        <h1>Cofetaria <span>Dulcelind</span></h1> 
+        <button id="tema">Schimba tema</button>
+        <script>
+        temaCurenta=localStorage.getItem("tema")
+    if(temaCurenta)
+        document.body.classList.add(temaCurenta);
+
+
+    document.getElementById("tema").onclick=function(){
+        if (document.body.classList.contains("dark")){
+            document.body.classList.remove("dark");
+            localStorage.removeItem("tema");
+        }
+        else{
+            document.body.classList.add("dark");
+            localStorage.setItem("tema","dark");
+        }
+    }</script>
+        <nav>
+            
+            <label id="hamburger" for="ch-menu">
+                <img src="/resurse/imagini/Hamburger_icon_alb.png" alt="menu">
+            </label>
+            <input id="ch-menu" type="checkbox">
+            <ul class="meniu">
+                <li><div>Acasa</div>
+                    <ul>
+                        <li><a href="/index#welcome">Bine ati venit</a></li>
+                        <li><a href="/index#promotii">Promotii</a></li>
+                        <li><a href="/index#anunturi">Anunturi</a></li>
+                        <li><a href="/index#produse">Oferta</a></li>
+                        <li><a href="/index#orar">Orar</a></li>
+                        <li><a href="/index#index-intrebari">Întrebări</a></li>
+                        <li><a href="/index#retete">Rețete</a></li>
+                    </ul>
+                
+                
+                </li>
+                <li><a href="/inregistrare">Inregistrare</a></li>
+                <li><div>Despre</div>
+                    <ul>                        
+                        <li><a href="/despre#prezentare">Prezentare</a></li>
+                        <li><a href="/despre#istoric">Istoric</a></li>
+                        <li><a href="/despre#motivatie">Motivatie</a></li>
+                        <li><a href="/despre#galerie">Galerie</a></li>
+                    </ul>
+                </li>
+                <li><div>Produse</div>
+                    <ul>
+                        <li><a href="/produse">Toate</a></li>
+                        <li><a href="/produse?tip=cofetarie">Prajituri</a></li>
+                        <li><a href="/produse?tip=gelaterie">Inghetata</a></li>
+                        <li><a href="/produse?tip=patiserie">Patiserie</a></li>
+                    </ul>
+                
+                </li>
+                <li><a href="/contact">Contact</a></li>
+                
+                <li><a href="/cos-virtual">Cos virtual</a></li>
+                <% if(locals?.utilizator?.areDreptul?.(Drepturi.vizualizareUtilizatori)) { %>
+                    <li><div>Administrare</div>
+                        <ul>
+                            <li><a href="/useri">Useri</a></li>
+                            <li><a href="/grafice">Grafice</a></li>
+                            <li><a href="/comenzi">Comenzi</a></li>
+                        </ul>
+                    </li>
+                <% } %>
+                <% if(locals.utilizator) { %>
+                    <li><div><%- locals.utilizator.username %></div>
+                        <ul>
+                            <li><a href="/profil">Profil</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                <% } %>
+            </ul>
+        </nav>
+    </header>
